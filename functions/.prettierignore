@@ -1,0 +1,8 @@
+build
+coverage
+node_modules/
+functions/firebase-config.json
+functions/service-account-key.json
+google-login-init.js
+google-login-init-example.js
+functions/.eslintrc.js
