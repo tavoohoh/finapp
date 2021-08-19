@@ -1,26 +1,21 @@
 import { firestore } from 'firebase-admin';
 import { HttpsError } from 'firebase-functions/lib/providers/https';
 import { CollectionEnum } from '../enums/collection.enum';
-import { BudgetModel, BudgetQueryModel } from '../models/budget.model';
+import { BudgetQueryModel, BudgetModel } from '../models/budget.model';
 
 const list = async (
-  queryParams: BudgetQueryModel
+  queryParams?: BudgetQueryModel
 ): Promise<BudgetModel[]> => {
-  let query: any = firestore().collection(CollectionEnum.budgets);
+  const query: any = firestore().collection(CollectionEnum.budgets);
+  const querySnapshot = await query.get();
 
-  if (queryParams.period_id) {
-    query = query.where('period_id', '==', queryParams.period_id);
-  }
-
-  const querySnapShot = await query.get();
-
-  return querySnapShot.docs.map((o: { data: () => BudgetModel; id: string; }) => {
+  return querySnapshot.docs.map((o: { data: () => BudgetModel; id: any; }) => {
     const data = o.data() as BudgetModel;
-    const uid = o.id;
+    const id = o.id;
 
     return {
       ...data,
-      uid
+      id
     };
   });
 };
@@ -31,8 +26,8 @@ const get = async (id: string): Promise<BudgetModel> => {
     .doc(id)
     .get();
 
-  if (!snapShot.id) {
-    throw new HttpsError('not-found', 'budget not found');
+  if (!snapShot.data()) {
+    throw new HttpsError('not-found', 'budget type not found');
   }
 
   const data = snapShot.data() as BudgetModel;

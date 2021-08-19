@@ -2,6 +2,8 @@ import { firestore } from 'firebase-admin';
 import { HttpsError } from 'firebase-functions/lib/providers/https';
 import { CollectionEnum } from '../enums/collection.enum';
 import { PeriodModel, PeriodQueryModel } from '../models/period.model';
+import { DateFactory } from '../commons/date';
+import { BudgetsService } from './budgets.service';
 
 const list = async (
   queryParams: PeriodQueryModel
@@ -14,6 +16,14 @@ const list = async (
 
   if (queryParams.date_end) {
     query = query.where('date_end', '==', queryParams.date_end);
+  }
+
+  if (queryParams.is_active) {
+    query = query.where('is_active', '==', true);
+  }
+
+  if (queryParams.is_latest) {
+    query = query.where('is_latest', '==', true);
   }
 
   const querySnapShot = await query.get();
@@ -35,7 +45,7 @@ const get = async (id: string): Promise<PeriodModel> => {
     .doc(id)
     .get();
 
-  if (!snapShot.id) {
+  if (!snapShot.data()) {
     throw new HttpsError('not-found', 'periods not found');
   }
 
@@ -47,7 +57,34 @@ const get = async (id: string): Promise<PeriodModel> => {
   };
 };
 
-const create = async (body: PeriodModel): Promise<firestore.DocumentReference<firestore.DocumentData>> => {
+const create = async (): Promise<firestore.DocumentReference<firestore.DocumentData>> => {
+  const currentPeriod = await list({
+    is_active: true
+  });
+
+  if (currentPeriod.length > 0) {
+    throw new HttpsError('failed-precondition', 'A period is already active');
+  }
+
+  const latestPeriod = await list({
+    is_latest: true
+  });
+
+  const body: PeriodModel = {
+    date_start: DateFactory.formatAsYYYYMMDD(new Date()),
+    budget: await BudgetsService.list(),
+    is_active: true,
+    is_latest: false,
+    total_income: latestPeriod[0]?.difference || 0,
+    total_expenses: 0,
+    difference: 0,
+    total_savings: 0
+  };
+
+  if (latestPeriod.length > 0) {
+    await patch(latestPeriod[0].id as string, { is_latest: false } as any);
+  }
+
   return firestore().collection(CollectionEnum.periods).add(body);
 };
 
@@ -58,8 +95,18 @@ const patch = async (id: string, body: PeriodModel): Promise<firestore.WriteResu
     .set(body, { merge: true });
 };
 
-const remove = async (id: string): Promise<firestore.WriteResult> => {
-  return firestore().collection(CollectionEnum.periods).doc(id).delete();
+const terminate = async (id: string): Promise<firestore.WriteResult> => {
+  const period = await get(id);
+
+  if (!period.is_active) {
+    throw new HttpsError('failed-precondition', 'This period is not active');
+  }
+
+  return patch(id, {
+    date_end: DateFactory.formatAsYYYYMMDD(new Date()),
+    is_active: false,
+    is_latest: true
+  } as any);
 };
 
 export const PeriodsService = {
@@ -67,5 +114,5 @@ export const PeriodsService = {
   list,
   create,
   patch,
-  remove
+  remove: terminate
 };

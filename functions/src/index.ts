@@ -13,5 +13,5 @@ initializeApp({
 firebase.initializeApp(firebaseConfig);
 
 export { periods } from './routes/periods.route';
-export { budgets } from './routes/budgets.route';
 export { transactions } from './routes/transactions.route';
+export { budgets } from './routes/budgets.route';

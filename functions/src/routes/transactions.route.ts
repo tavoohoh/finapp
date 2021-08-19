@@ -66,9 +66,8 @@ export const transactions = https.onRequest(async (request, response) => {
           return response
             .status(201)
             .send(
-              await TransactionsService.patch(
-                id,
-                request.body
+              await TransactionsService.remove(
+                id
               )
             );
 

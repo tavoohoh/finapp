@@ -3,9 +3,13 @@ export interface TransactionModel {
   budget: string;
   name: string;
   amount: number;
+  period_id: string;
+  date: string;
+  is_income: boolean;
 }
 
 export interface TransactionQueryModel {
-  budget_id: string;
-  period_id: string;
+  period_id?: string;
+  budget?: string;
+  date?: string;
 }

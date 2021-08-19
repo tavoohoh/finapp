@@ -2,7 +2,8 @@ export interface BudgetModel {
   id: string;
   name: string;
   amount: number;
-  period_id: string;
+  spent: number;
+  enabled: boolean;
 }
 
 export interface BudgetQueryModel {

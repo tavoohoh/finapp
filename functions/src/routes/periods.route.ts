@@ -32,7 +32,7 @@ export const periods = https.onRequest(async (request, response) => {
            */
           return response
             .status(201)
-            .send(await PeriodsService.create(request.body));
+            .send(await PeriodsService.create());
 
         case methodEnum.PATCH:
           if (!id) {
@@ -66,9 +66,8 @@ export const periods = https.onRequest(async (request, response) => {
           return response
             .status(201)
             .send(
-              await PeriodsService.patch(
-                id,
-                request.body
+              await PeriodsService.remove(
+                id
               )
             );
 

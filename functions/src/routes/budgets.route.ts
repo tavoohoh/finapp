@@ -1,7 +1,6 @@
 import { https } from 'firebase-functions';
 import { cors } from '../commons/cors';
 import { methodEnum } from '../enums/method.enum';
-import { PeriodsService } from '../services/periods.service';
 import { BudgetsService } from '../services/budgets.service';
 
 export const budgets = https.onRequest(async (request, response) => {
@@ -12,7 +11,7 @@ export const budgets = https.onRequest(async (request, response) => {
       switch (request.method) {
         case methodEnum.GET:
           /**
-           * Get budget
+           * Get budget type
            */
           if (id) {
             return response
@@ -21,7 +20,7 @@ export const budgets = https.onRequest(async (request, response) => {
           }
 
           /**
-           * List budgets
+           * List budget types
            */
           return response
             .status(200)
@@ -29,7 +28,7 @@ export const budgets = https.onRequest(async (request, response) => {
 
         case methodEnum.POST:
           /**
-           * Create budget
+           * Create budget type
            */
           return response
             .status(201)
@@ -43,7 +42,7 @@ export const budgets = https.onRequest(async (request, response) => {
           }
 
           /**
-           * Patch budget
+           * Patch budget type
            */
           return response
             .status(201)
@@ -62,14 +61,13 @@ export const budgets = https.onRequest(async (request, response) => {
           }
 
           /**
-           * Delete budget
+           * Delete budget type
            */
           return response
             .status(201)
             .send(
-              await PeriodsService.patch(
-                id,
-                request.body
+              await BudgetsService.remove(
+                id
               )
             );
 
