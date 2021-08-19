@@ -12,7 +12,9 @@ const list = async (
     query = query.where('period_id', '==', queryParams.period_id);
   }
 
-  return query.get().docs?.map((o: { data: () => BudgetModel; id: any; }) => {
+  const querySnapShot = await query.get();
+
+  return querySnapShot.docs.map((o: { data: () => BudgetModel; id: string; }) => {
     const data = o.data() as BudgetModel;
     const uid = o.id;
 

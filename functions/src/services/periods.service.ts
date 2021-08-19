@@ -16,13 +16,15 @@ const list = async (
     query = query.where('date_end', '==', queryParams.date_end);
   }
 
-  return query.get().docs?.map((o: { data: () => PeriodModel; id: any; }) => {
+  const querySnapShot = await query.get();
+
+  return querySnapShot.docs.map((o: { data: () => PeriodModel; id: string; }) => {
     const data = o.data() as PeriodModel;
-    const uid = o.id;
+    const id = o.id;
 
     return {
       ...data,
-      uid
+      id
     };
   });
 };

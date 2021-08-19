@@ -16,7 +16,9 @@ const list = async (
     query = query.where('budget_id', '==', queryParams.budget_id);
   }
 
-  return query.get().docs?.map((o: { data: () => TransactionModel; id: any; }) => {
+  const querySnapshot = await query.get();
+
+  return querySnapshot.docs.map((o: { data: () => TransactionModel; id: any; }) => {
     const data = o.data() as TransactionModel;
     const uid = o.id;
 
