@@ -87,7 +87,6 @@ const create = async (data: TransactionModel): Promise<firestore.DocumentReferen
 };
 
 const patch = async (id: string, body: TransactionModel): Promise<firestore.WriteResult> => {
-  // TODO if the amount changes then a recalculation of the budget "spent" is required
   return await firestore()
     .collection(CollectionEnum.transactions)
     .doc(id)
@@ -95,8 +94,27 @@ const patch = async (id: string, body: TransactionModel): Promise<firestore.Writ
 };
 
 const remove = async (id: string): Promise<firestore.WriteResult> => {
-  // TODO the budget "spent" most be recalculated
-  return firestore().collection(CollectionEnum.transactions).doc(id).delete();
+  const transaction = await get(id);
+  const response = await firestore().collection(CollectionEnum.transactions).doc(id).delete();
+
+  const period = await PeriodsService.get(transaction.period_id);
+
+  if (!transaction.is_income) {
+    const budgetIndex = period.budget.findIndex((o) => o.name === transaction.budget);
+
+    if (budgetIndex !== -1) {
+      period.budget[budgetIndex].spent = period.budget[budgetIndex].spent - transaction.amount;
+      period.total_expenses = period.total_expenses - transaction.amount;
+    }
+  } else {
+    period.total_income = period.total_income - transaction.amount;
+  }
+
+  period.difference = period.total_income - period.total_expenses;
+
+  await PeriodsService.patch(period.id as string, period);
+
+  return response;
 };
 
 export const TransactionsService = {
