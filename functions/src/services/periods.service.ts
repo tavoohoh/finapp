@@ -70,15 +70,17 @@ const create = async (): Promise<firestore.DocumentReference<firestore.DocumentD
     is_latest: true
   });
 
+  const total_savings = (latestPeriod[0]?.total_savings || 0) + (latestPeriod[0]?.difference || 0);
+
   const body: PeriodModel = {
     date_start: DateFactory.formatAsYYYYMMDD(new Date()),
     budget: await BudgetsService.list(),
     is_active: true,
     is_latest: false,
-    total_income: latestPeriod[0]?.difference || 0,
+    total_income: 0,
     total_expenses: 0,
     difference: 0,
-    total_savings: 0
+    total_savings
   };
 
   if (latestPeriod.length > 0) {
