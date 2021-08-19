@@ -1,0 +1,146 @@
+[
+  {
+    "is_income": true,
+    "date": "2021-08-19T22:32:03.285Z",
+    "name": "Ajuste de Nomina",
+    "amount": 9000000,
+    "period_id": "POPdEhSu7pZWWziJ6J2E",
+    "budget": "",
+    "id": "cfowAEeEh78PTI97cmDZ"
+  },
+  {
+    "is_income": true,
+    "name": "Nomina",
+    "budget": "",
+    "amount": 1000000,
+    "period_id": "POPdEhSu7pZWWziJ6J2E",
+    "date": "2021-08-19T22:31:31.353Z",
+    "id": "I8Ykt03IAooWRB5MxKXr"
+  },
+  {
+    "name": "Exito",
+    "period_id": "POPdEhSu7pZWWziJ6J2E",
+    "is_income": false,
+    "amount": 2050000,
+    "budget": "Housing",
+    "date": "2021-08-19T22:31:12.092Z",
+    "id": "myg4D0ae5G7WAQqD9vPH"
+  },
+  {
+    "is_income": false,
+    "period_id": "POPdEhSu7pZWWziJ6J2E",
+    "budget": "Food",
+    "date": "2021-08-19T22:30:57.990Z",
+    "amount": 350000,
+    "name": "Exito",
+    "id": "MCSbLqZJ3u6EyHl8tiFe"
+  },
+  {
+    "amount": 100200,
+    "budget": "Food",
+    "is_income": false,
+    "name": "Carulla",
+    "date": "2021-08-19T22:30:49.656Z",
+    "period_id": "POPdEhSu7pZWWziJ6J2E",
+    "id": "FiNn841i2ESRMrC5yIOB"
+  },
+  {
+    "name": "Music show",
+    "date": "2021-08-19T22:30:37.067Z",
+    "period_id": "POPdEhSu7pZWWziJ6J2E",
+    "budget": "Entertainment",
+    "is_income": false,
+    "amount": 203000,
+    "id": "p7mP9boximyDEfo3NOC7"
+  },
+  {
+    "budget": "Entertainment",
+    "amount": 115000,
+    "name": "Movies",
+    "period_id": "POPdEhSu7pZWWziJ6J2E",
+    "date": "2021-08-19T22:30:17.312Z",
+    "is_income": false,
+    "id": "fLNwdCSzpRJNuDzd0IdU"
+  },
+  {
+    "budget": "Entertainment",
+    "amount": 115000,
+    "is_income": false,
+    "period_id": "BDHog9uxcon3lkjbVBYc",
+    "name": "Movies",
+    "date": "2021-08-19T22:26:48.400Z",
+    "id": "loMGcLB315P03oDm62y8"
+  },
+  {
+    "name": "Arriendo",
+    "period_id": "BDHog9uxcon3lkjbVBYc",
+    "is_income": false,
+    "date": "2021-08-19T22:26:30.370Z",
+    "amount": 2050000,
+    "budget": "Housing",
+    "id": "wi5YOWnRVl6Gv6hKhYs8"
+  },
+  {
+    "name": "Existo",
+    "period_id": "BDHog9uxcon3lkjbVBYc",
+    "date": "2021-08-19T22:26:09.671Z",
+    "amount": 120000,
+    "is_income": false,
+    "budget": "Food",
+    "id": "nVqMzbOXWui7TtFAkC0K"
+  },
+  {
+    "name": "Carulla",
+    "amount": 350000,
+    "period_id": "BDHog9uxcon3lkjbVBYc",
+    "budget": "Food",
+    "date": "2021-08-19T22:25:58.191Z",
+    "is_income": false,
+    "id": "9So0Om9iPlJOh0ozJgth"
+  },
+  {
+    "date": "2021-08-19T22:25:40.185Z",
+    "name": "Nomina",
+    "period_id": "BDHog9uxcon3lkjbVBYc",
+    "budget": "",
+    "is_income": true,
+    "amount": 10000000,
+    "id": "78MKxSXyvBvE5jooVC3a"
+  },
+  {
+    "budget": "",
+    "is_income": true,
+    "name": "Nomina",
+    "amount": 10000000,
+    "period_id": "dsicQu9OzkUshruTgTwM",
+    "date": "2021-08-19T21:56:44.489Z",
+    "id": "IbxCuM9ACWBxINkX35MY"
+  },
+  {
+    "is_income": false,
+    "budget": "Food",
+    "period_id": "dsicQu9OzkUshruTgTwM",
+    "name": "Exito",
+    "amount": 100000,
+    "date": "2021-08-19T21:54:27.666Z",
+    "id": "zQjIuHbuVK4vryas3Yts"
+  },
+  {
+    "name": "Carulla",
+    "amount": 350000,
+    "date": "2021-08-19T21:54:18.640Z",
+    "period_id": "dsicQu9OzkUshruTgTwM",
+    "is_income": false,
+    "budget": "Food",
+    "id": "2W5LndvLxzoz5BDSgNCi"
+  },
+  {
+    "name": "Arriendo",
+    "amount": 2000000,
+    "budget": "Housing",
+    "period_id": "dsicQu9OzkUshruTgTwM",
+    "is_income": false,
+    "date": "2021-08-19T21:53:47.633Z",
+    "id": "n59MDNvpodOEcy0UmcpW"
+  }
+]

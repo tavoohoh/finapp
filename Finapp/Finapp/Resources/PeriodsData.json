@@ -1,0 +1,208 @@
+[
+  {
+    "date_end": "2021-08-19",
+    "total_income": 10000000,
+    "difference": 7365000,
+    "date_start": "2021-07-19",
+    "total_expenses": 2635000,
+    "is_latest": false,
+    "total_savings": 7550000,
+    "is_active": false,
+    "budget": [
+      {
+        "id": "36vddw3fPg5wYrceh56u",
+        "amount": 0,
+        "name": "Entertainment",
+        "spent": 115000,
+        "enabled": true
+      },
+      {
+        "spent": 470000,
+        "name": "Food",
+        "enabled": true,
+        "id": "6VSm149CEjSjx2qnJ5kD",
+        "amount": 0
+      },
+      {
+        "name": "Transportation",
+        "amount": 0,
+        "id": "Krsa2iyH2WsxfCZMOtGU",
+        "enabled": true,
+        "spent": 0
+      },
+      {
+        "enabled": true,
+        "spent": 2050000,
+        "amount": 0,
+        "id": "LYOId8DS4Y4FnHkfQyWO",
+        "name": "Housing"
+      },
+      {
+        "id": "i2gxWK0Wso7zQO0Fq6JU",
+        "amount": 0,
+        "name": "Personal",
+        "spent": 0,
+        "enabled": true
+      },
+      {
+        "enabled": true,
+        "spent": 0,
+        "id": "mn1zjSyZVfn1d0sj4CQE",
+        "name": "Other",
+        "amount": 0
+      },
+      {
+        "enabled": true,
+        "spent": 0,
+        "amount": 0,
+        "name": "Health Care",
+        "id": "tqF55mrfgdGsH4zXhF7r"
+      },
+      {
+        "amount": 0,
+        "name": "Loans",
+        "enabled": true,
+        "spent": 0,
+        "id": "zAkEcph9a0CiwKOFP0Og"
+      }
+    ],
+    "id": "BDHog9uxcon3lkjbVBYc"
+  },
+  {
+    "total_expenses": 0,
+    "date_start": "2021-08-19",
+    "total_savings": 14915000,
+    "total_income": 0,
+    "is_active": true,
+    "budget": [
+      {
+        "amount": 0,
+        "enabled": true,
+        "spent": 0,
+        "id": "36vddw3fPg5wYrceh56u",
+        "name": "Entertainment"
+      },
+      {
+        "enabled": true,
+        "amount": 0,
+        "id": "6VSm149CEjSjx2qnJ5kD",
+        "spent": 0,
+        "name": "Food"
+      },
+      {
+        "enabled": true,
+        "amount": 0,
+        "name": "Transportation",
+        "id": "Krsa2iyH2WsxfCZMOtGU",
+        "spent": 0
+      },
+      {
+        "spent": 0,
+        "id": "LYOId8DS4Y4FnHkfQyWO",
+        "name": "Housing",
+        "amount": 0,
+        "enabled": true
+      },
+      {
+        "id": "i2gxWK0Wso7zQO0Fq6JU",
+        "enabled": true,
+        "amount": 0,
+        "name": "Personal",
+        "spent": 0
+      },
+      {
+        "id": "mn1zjSyZVfn1d0sj4CQE",
+        "name": "Other",
+        "enabled": true,
+        "spent": 0,
+        "amount": 0
+      },
+      {
+        "id": "tqF55mrfgdGsH4zXhF7r",
+        "spent": 0,
+        "amount": 0,
+        "name": "Health Care",
+        "enabled": true
+      },
+      {
+        "name": "Loans",
+        "id": "zAkEcph9a0CiwKOFP0Og",
+        "enabled": true,
+        "spent": 0,
+        "amount": 0
+      }
+    ],
+    "difference": 0,
+    "is_latest": false,
+    "id": "POPdEhSu7pZWWziJ6J2E"
+  },
+  {
+    "id": "dsicQu9OzkUshruTgTwM",
+    "difference": 7550000,
+    "total_savings": 0,
+    "total_income": 10000000,
+    "budget": [
+      {
+        "enabled": true,
+        "amount": 0,
+        "name": "Entertainment",
+        "id": "36vddw3fPg5wYrceh56u",
+        "spent": 0
+      },
+      {
+        "amount": 0,
+        "enabled": true,
+        "spent": 450000,
+        "name": "Food",
+        "id": "6VSm149CEjSjx2qnJ5kD"
+      },
+      {
+        "enabled": true,
+        "spent": 0,
+        "id": "Krsa2iyH2WsxfCZMOtGU",
+        "name": "Transportation",
+        "amount": 0
+      },
+      {
+        "id": "LYOId8DS4Y4FnHkfQyWO",
+        "amount": 0,
+        "enabled": true,
+        "name": "Housing",
+        "spent": 2000000
+      },
+      {
+        "name": "Personal",
+        "id": "i2gxWK0Wso7zQO0Fq6JU",
+        "enabled": true,
+        "amount": 0,
+        "spent": 0
+      },
+      {
+        "enabled": true,
+        "name": "Other",
+        "spent": 0,
+        "id": "mn1zjSyZVfn1d0sj4CQE",
+        "amount": 0
+      },
+      {
+        "id": "tqF55mrfgdGsH4zXhF7r",
+        "amount": 0,
+        "name": "Health Care",
+        "enabled": true,
+        "spent": 0
+      },
+      {
+        "id": "zAkEcph9a0CiwKOFP0Og",
+        "enabled": true,
+        "spent": 0,
+        "name": "Loans",
+        "amount": 0
+      }
+    ],
+    "date_end": "2021-07-19",
+    "is_active": false,
+    "is_latest": false,
+    "total_expenses": 2450000,
+    "date_start": "2021-06-19"
+  }
+]
