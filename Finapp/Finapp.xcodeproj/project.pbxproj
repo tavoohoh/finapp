@@ -11,30 +11,18 @@
 		CC3BCCBB26CF149C0069E200 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCBA26CF149C0069E200 /* ContentView.swift */; };
 		CC3BCCBD26CF149D0069E200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3BCCBC26CF149D0069E200 /* Assets.xcassets */; };
 		CC3BCCC026CF149D0069E200 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3BCCBF26CF149D0069E200 /* Preview Assets.xcassets */; };
-		CC3BCCCE26CF15320069E200 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3BCCCD26CF15320069E200 /* WidgetKit.framework */; };
-		CC3BCCD026CF15320069E200 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3BCCCF26CF15320069E200 /* SwiftUI.framework */; };
-		CC3BCCD326CF15320069E200 /* widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCD226CF15320069E200 /* widget.swift */; };
-		CC3BCCD626CF15330069E200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3BCCD526CF15330069E200 /* Assets.xcassets */; };
-		CC3BCCD826CF15330069E200 /* widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCD426CF15320069E200 /* widget.intentdefinition */; };
-		CC3BCCD926CF15330069E200 /* widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCD426CF15320069E200 /* widget.intentdefinition */; };
-		CC3BCCDC26CF15330069E200 /* widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CC3BCCCB26CF15320069E200 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CC3BCCE826CF164C0069E200 /* PeriodsData.json in Resources */ = {isa = PBXBuildFile; fileRef = CC3BCCE726CF164C0069E200 /* PeriodsData.json */; };
-		CC3BCCE926CF164C0069E200 /* PeriodsData.json in Resources */ = {isa = PBXBuildFile; fileRef = CC3BCCE726CF164C0069E200 /* PeriodsData.json */; };
 		CC3BCCEB26CF165C0069E200 /* BudgetsData.json in Resources */ = {isa = PBXBuildFile; fileRef = CC3BCCEA26CF165C0069E200 /* BudgetsData.json */; };
-		CC3BCCEC26CF165C0069E200 /* BudgetsData.json in Resources */ = {isa = PBXBuildFile; fileRef = CC3BCCEA26CF165C0069E200 /* BudgetsData.json */; };
 		CC3BCCEE26CF166F0069E200 /* TransactionsData.json in Resources */ = {isa = PBXBuildFile; fileRef = CC3BCCED26CF166F0069E200 /* TransactionsData.json */; };
-		CC3BCCEF26CF166F0069E200 /* TransactionsData.json in Resources */ = {isa = PBXBuildFile; fileRef = CC3BCCED26CF166F0069E200 /* TransactionsData.json */; };
 		CC3BCCF126CF176A0069E200 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCF026CF176A0069E200 /* Period.swift */; };
-		CC3BCCF226CF176A0069E200 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCF026CF176A0069E200 /* Period.swift */; };
 		CC3BCCF426CF18610069E200 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCF326CF18610069E200 /* Budget.swift */; };
-		CC3BCCF526CF18610069E200 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCF326CF18610069E200 /* Budget.swift */; };
 		CC3BCCF726CF19040069E200 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCF626CF19040069E200 /* Transaction.swift */; };
-		CC3BCCF826CF19040069E200 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCF626CF19040069E200 /* Transaction.swift */; };
 		CC3BCCFD26CF1AEA0069E200 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCFC26CF1AEA0069E200 /* TransactionRow.swift */; };
 		CC3BCD0026D0066B0069E200 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCFF26D0066B0069E200 /* CurrencyFormatter.swift */; };
 		CC3BCD0326D00B5A0069E200 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0226D00B5A0069E200 /* ModelData.swift */; };
 		CC3BCD0526D013C60069E200 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0426D013C60069E200 /* DateFormatter.swift */; };
 		CC3BCD0726D02E260069E200 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0626D02E260069E200 /* TransactionList.swift */; };
+		CC7FDDB726D1A91D00834B1D /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FDDB626D1A91D00834B1D /* ApiService.swift */; };
 		CCDCDF5826D0A9170021EDE6 /* PeriodsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5726D0A9170021EDE6 /* PeriodsPage.swift */; };
 		CCDCDF5A26D0A9BF0021EDE6 /* PeriodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5926D0A9BF0021EDE6 /* PeriodRow.swift */; };
 		CCDCDF5C26D0AA920021EDE6 /* PeriodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5B26D0AA920021EDE6 /* PeriodList.swift */; };
@@ -42,22 +30,12 @@
 		CCDCDF6026D0B65C0021EDE6 /* BudgetAmountCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5F26D0B65C0021EDE6 /* BudgetAmountCard.swift */; };
 		CCDCDF6226D14F110021EDE6 /* CurrentPeriodPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF6126D14F110021EDE6 /* CurrentPeriodPage.swift */; };
 		CCDCDF6426D14FD60021EDE6 /* CurrentPeriodData.json in Resources */ = {isa = PBXBuildFile; fileRef = CCDCDF6326D14FD60021EDE6 /* CurrentPeriodData.json */; };
-		CCDCDF6526D14FD60021EDE6 /* CurrentPeriodData.json in Resources */ = {isa = PBXBuildFile; fileRef = CCDCDF6326D14FD60021EDE6 /* CurrentPeriodData.json */; };
 		CCDCDF6D26D154E50021EDE6 /* BudgetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF6C26D154E50021EDE6 /* BudgetRow.swift */; };
 		CCDCDF6F26D1555C0021EDE6 /* BudgetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF6E26D1555C0021EDE6 /* BudgetList.swift */; };
 		CCDCDF7126D159AA0021EDE6 /* BudgetDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF7026D159AA0021EDE6 /* BudgetDetailPage.swift */; };
 		CCDCDF7326D15B250021EDE6 /* BudgetAmountCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF7226D15B250021EDE6 /* BudgetAmountCardStack.swift */; };
+		CCDCDF7726D1A4630021EDE6 /* RowWithActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF7626D1A4630021EDE6 /* RowWithActions.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CC3BCCDA26CF15330069E200 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CC3BCCAD26CF149C0069E200 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CC3BCCCA26CF15320069E200;
-			remoteInfo = widgetExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CC3BCCE026CF15330069E200 /* Embed App Extensions */ = {
@@ -66,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				CC3BCCDC26CF15330069E200 /* widgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,13 +57,8 @@
 		CC3BCCBC26CF149D0069E200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3BCCBF26CF149D0069E200 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC3BCCC126CF149D0069E200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC3BCCCB26CF15320069E200 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3BCCCD26CF15320069E200 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CC3BCCCF26CF15320069E200 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		CC3BCCD226CF15320069E200 /* widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widget.swift; sourceTree = "<group>"; };
-		CC3BCCD426CF15320069E200 /* widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = widget.intentdefinition; sourceTree = "<group>"; };
-		CC3BCCD526CF15330069E200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC3BCCD726CF15330069E200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3BCCE726CF164C0069E200 /* PeriodsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PeriodsData.json; sourceTree = "<group>"; };
 		CC3BCCEA26CF165C0069E200 /* BudgetsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BudgetsData.json; sourceTree = "<group>"; };
 		CC3BCCED26CF166F0069E200 /* TransactionsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TransactionsData.json; sourceTree = "<group>"; };
@@ -98,6 +70,7 @@
 		CC3BCD0226D00B5A0069E200 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		CC3BCD0426D013C60069E200 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		CC3BCD0626D02E260069E200 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
+		CC7FDDB626D1A91D00834B1D /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		CCDCDF5726D0A9170021EDE6 /* PeriodsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodsPage.swift; sourceTree = "<group>"; };
 		CCDCDF5926D0A9BF0021EDE6 /* PeriodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodRow.swift; sourceTree = "<group>"; };
 		CCDCDF5B26D0AA920021EDE6 /* PeriodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodList.swift; sourceTree = "<group>"; };
@@ -109,6 +82,7 @@
 		CCDCDF6E26D1555C0021EDE6 /* BudgetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetList.swift; sourceTree = "<group>"; };
 		CCDCDF7026D159AA0021EDE6 /* BudgetDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailPage.swift; sourceTree = "<group>"; };
 		CCDCDF7226D15B250021EDE6 /* BudgetAmountCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetAmountCardStack.swift; sourceTree = "<group>"; };
+		CCDCDF7626D1A4630021EDE6 /* RowWithActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowWithActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,15 +93,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC3BCCC826CF15320069E200 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC3BCCD026CF15320069E200 /* SwiftUI.framework in Frameworks */,
-				CC3BCCCE26CF15320069E200 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -135,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				CC3BCCB726CF149C0069E200 /* Finapp */,
-				CC3BCCD126CF15320069E200 /* Widget */,
 				CC3BCCCC26CF15320069E200 /* Frameworks */,
 				CC3BCCB626CF149C0069E200 /* Products */,
 			);
@@ -145,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				CC3BCCB526CF149C0069E200 /* Finapp.app */,
-				CC3BCCCB26CF15320069E200 /* widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +123,7 @@
 				CC3BCCBC26CF149D0069E200 /* Assets.xcassets */,
 				CC3BCCC126CF149D0069E200 /* Info.plist */,
 				CC3BCCBE26CF149D0069E200 /* Preview Content */,
+				CC7FDDB626D1A91D00834B1D /* ApiService.swift */,
 			);
 			path = Finapp;
 			sourceTree = "<group>";
@@ -179,17 +143,6 @@
 				CC3BCCCF26CF15320069E200 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CC3BCCD126CF15320069E200 /* Widget */ = {
-			isa = PBXGroup;
-			children = (
-				CC3BCCD226CF15320069E200 /* widget.swift */,
-				CC3BCCD426CF15320069E200 /* widget.intentdefinition */,
-				CC3BCCD526CF15330069E200 /* Assets.xcassets */,
-				CC3BCCD726CF15330069E200 /* Info.plist */,
-			);
-			path = Widget;
 			sourceTree = "<group>";
 		};
 		CC3BCCE226CF15900069E200 /* Models */ = {
@@ -222,6 +175,7 @@
 				CCDCDF5626D0A9050021EDE6 /* Periods */,
 				CC3BCD0A26D030F10069E200 /* Budgets */,
 				CC3BCCFE26CF1AF10069E200 /* Transactions */,
+				CCDCDF7626D1A4630021EDE6 /* RowWithActions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,29 +237,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				CC3BCCDB26CF15330069E200 /* PBXTargetDependency */,
 			);
 			name = Finapp;
 			productName = Finapp;
 			productReference = CC3BCCB526CF149C0069E200 /* Finapp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		CC3BCCCA26CF15320069E200 /* widgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CC3BCCDD26CF15330069E200 /* Build configuration list for PBXNativeTarget "widgetExtension" */;
-			buildPhases = (
-				CC3BCCC726CF15320069E200 /* Sources */,
-				CC3BCCC826CF15320069E200 /* Frameworks */,
-				CC3BCCC926CF15320069E200 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = widgetExtension;
-			productName = widgetExtension;
-			productReference = CC3BCCCB26CF15320069E200 /* widgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -317,9 +253,6 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					CC3BCCB426CF149C0069E200 = {
-						CreatedOnToolsVersion = 12.5.1;
-					};
-					CC3BCCCA26CF15320069E200 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -338,7 +271,6 @@
 			projectRoot = "";
 			targets = (
 				CC3BCCB426CF149C0069E200 /* Finapp */,
-				CC3BCCCA26CF15320069E200 /* widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -357,18 +289,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC3BCCC926CF15320069E200 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CCDCDF6526D14FD60021EDE6 /* CurrentPeriodData.json in Resources */,
-				CC3BCCEF26CF166F0069E200 /* TransactionsData.json in Resources */,
-				CC3BCCE926CF164C0069E200 /* PeriodsData.json in Resources */,
-				CC3BCCEC26CF165C0069E200 /* BudgetsData.json in Resources */,
-				CC3BCCD626CF15330069E200 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -376,10 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDCDF7726D1A4630021EDE6 /* RowWithActions.swift in Sources */,
 				CC3BCCFD26CF1AEA0069E200 /* TransactionRow.swift in Sources */,
-				CC3BCCD926CF15330069E200 /* widget.intentdefinition in Sources */,
 				CCDCDF5E26D0AE3D0021EDE6 /* PeriodPage.swift in Sources */,
 				CCDCDF6226D14F110021EDE6 /* CurrentPeriodPage.swift in Sources */,
+				CC7FDDB726D1A91D00834B1D /* ApiService.swift in Sources */,
 				CC3BCCBB26CF149C0069E200 /* ContentView.swift in Sources */,
 				CC3BCCF726CF19040069E200 /* Transaction.swift in Sources */,
 				CC3BCD0726D02E260069E200 /* TransactionList.swift in Sources */,
@@ -400,27 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC3BCCC726CF15320069E200 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC3BCCD826CF15330069E200 /* widget.intentdefinition in Sources */,
-				CC3BCCD326CF15320069E200 /* widget.swift in Sources */,
-				CC3BCCF526CF18610069E200 /* Budget.swift in Sources */,
-				CC3BCCF226CF176A0069E200 /* Period.swift in Sources */,
-				CC3BCCF826CF19040069E200 /* Transaction.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CC3BCCDB26CF15330069E200 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CC3BCCCA26CF15320069E200 /* widgetExtension */;
-			targetProxy = CC3BCCDA26CF15330069E200 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CC3BCCC226CF149D0069E200 /* Debug */ = {
@@ -585,48 +486,6 @@
 			};
 			name = Release;
 		};
-		CC3BCCDE26CF15330069E200 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2XW5B8J28;
-				INFOPLIST_FILE = widget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tavoohoh.Finapp.widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CC3BCCDF26CF15330069E200 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2XW5B8J28;
-				INFOPLIST_FILE = widget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tavoohoh.Finapp.widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -644,15 +503,6 @@
 			buildConfigurations = (
 				CC3BCCC526CF149D0069E200 /* Debug */,
 				CC3BCCC626CF149D0069E200 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CC3BCCDD26CF15330069E200 /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CC3BCCDE26CF15330069E200 /* Debug */,
-				CC3BCCDF26CF15330069E200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

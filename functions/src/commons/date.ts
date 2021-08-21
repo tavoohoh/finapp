@@ -1,7 +1,7 @@
 const formatAsYYYYMMDD = (date: Date): string => {
   const year = date.getFullYear();
   let month = (date.getMonth() + 1).toString();
-  let day = (date.getDate()).toString();
+  let day = date.getDate().toString();
 
   if (month.length < 2) {
     month = `0${month}`;

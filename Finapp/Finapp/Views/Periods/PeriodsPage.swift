@@ -15,6 +15,11 @@ struct PeriodsPage: View {
             PeriodList(periods: modelData.periods)
                 .navigationTitle("All Periods")
         }
+        .onAppear() {
+            ApiService().getPeriods { (periods) in
+                modelData.periods = periods
+            }
+        }
     }
 }
 
