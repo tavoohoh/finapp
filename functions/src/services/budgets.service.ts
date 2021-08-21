@@ -1,15 +1,13 @@
 import { firestore } from 'firebase-admin';
 import { HttpsError } from 'firebase-functions/lib/providers/https';
 import { CollectionEnum } from '../enums/collection.enum';
-import { BudgetQueryModel, BudgetModel } from '../models/budget.model';
+import { BudgetModel, BudgetQueryModel } from '../models/budget.model';
 
-const list = async (
-  queryParams?: BudgetQueryModel
-): Promise<BudgetModel[]> => {
+const list = async (queryParams?: BudgetQueryModel): Promise<BudgetModel[]> => {
   const query: any = firestore().collection(CollectionEnum.budgets);
   const querySnapshot = await query.get();
 
-  return querySnapshot.docs.map((o: { data: () => BudgetModel; id: any; }) => {
+  return querySnapshot.docs.map((o: { data: () => BudgetModel; id: any }) => {
     const data = o.data() as BudgetModel;
     const id = o.id;
 
@@ -38,11 +36,16 @@ const get = async (id: string): Promise<BudgetModel> => {
   };
 };
 
-const create = async (body: BudgetModel): Promise<firestore.DocumentReference<firestore.DocumentData>> => {
+const create = async (
+  body: BudgetModel
+): Promise<firestore.DocumentReference<firestore.DocumentData>> => {
   return firestore().collection(CollectionEnum.budgets).add(body);
 };
 
-const patch = async (id: string, body: BudgetModel): Promise<firestore.WriteResult> => {
+const patch = async (
+  id: string,
+  body: BudgetModel
+): Promise<firestore.WriteResult> => {
   return await firestore()
     .collection(CollectionEnum.budgets)
     .doc(id)

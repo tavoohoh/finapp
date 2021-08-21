@@ -30,8 +30,12 @@
 		CC3BCCF526CF18610069E200 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCF326CF18610069E200 /* Budget.swift */; };
 		CC3BCCF726CF19040069E200 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCF626CF19040069E200 /* Transaction.swift */; };
 		CC3BCCF826CF19040069E200 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCF626CF19040069E200 /* Transaction.swift */; };
-		CC3BCCFB26CF1ABE0069E200 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCFA26CF1ABE0069E200 /* HomeView.swift */; };
-		CC3BCCFD26CF1AEA0069E200 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCFC26CF1AEA0069E200 /* ListView.swift */; };
+		CC3BCCFD26CF1AEA0069E200 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCFC26CF1AEA0069E200 /* TransactionRow.swift */; };
+		CC3BCD0026D0066B0069E200 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCCFF26D0066B0069E200 /* CurrencyFormatter.swift */; };
+		CC3BCD0326D00B5A0069E200 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0226D00B5A0069E200 /* ModelData.swift */; };
+		CC3BCD0526D013C60069E200 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0426D013C60069E200 /* DateFormatter.swift */; };
+		CC3BCD0726D02E260069E200 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0626D02E260069E200 /* TransactionList.swift */; };
+		CC3BCD0926D02EFA0069E200 /* BudgetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0826D02EFA0069E200 /* BudgetDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +82,12 @@
 		CC3BCCF026CF176A0069E200 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		CC3BCCF326CF18610069E200 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		CC3BCCF626CF19040069E200 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		CC3BCCFA26CF1ABE0069E200 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CC3BCCFC26CF1AEA0069E200 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		CC3BCCFC26CF1AEA0069E200 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		CC3BCCFF26D0066B0069E200 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		CC3BCD0226D00B5A0069E200 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		CC3BCD0426D013C60069E200 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		CC3BCD0626D02E260069E200 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
+		CC3BCD0826D02EFA0069E200 /* BudgetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +136,6 @@
 				CC3BCCE326CF15A10069E200 /* Resources */,
 				CC3BCCE226CF15900069E200 /* Models */,
 				CC3BCCB826CF149C0069E200 /* FinappApp.swift */,
-				CC3BCCBA26CF149C0069E200 /* ContentView.swift */,
 				CC3BCCBC26CF149D0069E200 /* Assets.xcassets */,
 				CC3BCCC126CF149D0069E200 /* Info.plist */,
 				CC3BCCBE26CF149D0069E200 /* Preview Content */,
@@ -167,9 +174,11 @@
 		CC3BCCE226CF15900069E200 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CC3BCD0126D006730069E200 /* Helpers */,
 				CC3BCCF026CF176A0069E200 /* Period.swift */,
 				CC3BCCF326CF18610069E200 /* Budget.swift */,
 				CC3BCCF626CF19040069E200 /* Transaction.swift */,
+				CC3BCD0226D00B5A0069E200 /* ModelData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,18 +196,37 @@
 		CC3BCCF926CF19E60069E200 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CC3BCCFE26CF1AF10069E200 /* Components */,
-				CC3BCCFA26CF1ABE0069E200 /* HomeView.swift */,
+				CC3BCCBA26CF149C0069E200 /* ContentView.swift */,
+				CC3BCD0A26D030F10069E200 /* Budgets */,
+				CC3BCCFE26CF1AF10069E200 /* Transactions */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CC3BCCFE26CF1AF10069E200 /* Components */ = {
+		CC3BCCFE26CF1AF10069E200 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				CC3BCCFC26CF1AEA0069E200 /* ListView.swift */,
+				CC3BCCFC26CF1AEA0069E200 /* TransactionRow.swift */,
+				CC3BCD0626D02E260069E200 /* TransactionList.swift */,
 			);
-			path = Components;
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		CC3BCD0126D006730069E200 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CC3BCCFF26D0066B0069E200 /* CurrencyFormatter.swift */,
+				CC3BCD0426D013C60069E200 /* DateFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CC3BCD0A26D030F10069E200 /* Budgets */ = {
+			isa = PBXGroup;
+			children = (
+				CC3BCD0826D02EFA0069E200 /* BudgetDetail.swift */,
+			);
+			path = Budgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,13 +335,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC3BCCFD26CF1AEA0069E200 /* ListView.swift in Sources */,
+				CC3BCCFD26CF1AEA0069E200 /* TransactionRow.swift in Sources */,
 				CC3BCCD926CF15330069E200 /* widget.intentdefinition in Sources */,
-				CC3BCCFB26CF1ABE0069E200 /* HomeView.swift in Sources */,
 				CC3BCCBB26CF149C0069E200 /* ContentView.swift in Sources */,
 				CC3BCCF726CF19040069E200 /* Transaction.swift in Sources */,
+				CC3BCD0726D02E260069E200 /* TransactionList.swift in Sources */,
+				CC3BCD0926D02EFA0069E200 /* BudgetDetail.swift in Sources */,
+				CC3BCD0526D013C60069E200 /* DateFormatter.swift in Sources */,
 				CC3BCCF426CF18610069E200 /* Budget.swift in Sources */,
 				CC3BCCF126CF176A0069E200 /* Period.swift in Sources */,
+				CC3BCD0326D00B5A0069E200 /* ModelData.swift in Sources */,
+				CC3BCD0026D0066B0069E200 /* CurrencyFormatter.swift in Sources */,
 				CC3BCCB926CF149C0069E200 /* FinappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,11 @@
 import Foundation
 
 struct Transaction: Codable, Hashable, Identifiable {
-    var id: String
-    var budget: String
+    var is_income: Bool
+    var date: String
     var name: String
     var amount: Double
     var period_id: String
-    var date: String
+    var budget: String
+    var id: String
 }
