@@ -19,6 +19,8 @@ struct TransactionList: View {
                 }
             }
         }
+        .listStyle(InsetGroupedListStyle())
+        
     }
 }
 

@@ -11,6 +11,7 @@ import Combine
 final class ModelData: ObservableObject {
     @Published var transactions: [Transaction] = load("TransactionsData.json")
     @Published var periods: [Period] = load("PeriodsData.json")
+    @Published var currentPeriod: Period = load("CurrentPeriodData.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

@@ -40,6 +40,13 @@
 		CCDCDF5C26D0AA920021EDE6 /* PeriodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5B26D0AA920021EDE6 /* PeriodList.swift */; };
 		CCDCDF5E26D0AE3D0021EDE6 /* PeriodPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5D26D0AE3D0021EDE6 /* PeriodPage.swift */; };
 		CCDCDF6026D0B65C0021EDE6 /* BudgetAmountCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5F26D0B65C0021EDE6 /* BudgetAmountCard.swift */; };
+		CCDCDF6226D14F110021EDE6 /* CurrentPeriodPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF6126D14F110021EDE6 /* CurrentPeriodPage.swift */; };
+		CCDCDF6426D14FD60021EDE6 /* CurrentPeriodData.json in Resources */ = {isa = PBXBuildFile; fileRef = CCDCDF6326D14FD60021EDE6 /* CurrentPeriodData.json */; };
+		CCDCDF6526D14FD60021EDE6 /* CurrentPeriodData.json in Resources */ = {isa = PBXBuildFile; fileRef = CCDCDF6326D14FD60021EDE6 /* CurrentPeriodData.json */; };
+		CCDCDF6D26D154E50021EDE6 /* BudgetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF6C26D154E50021EDE6 /* BudgetRow.swift */; };
+		CCDCDF6F26D1555C0021EDE6 /* BudgetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF6E26D1555C0021EDE6 /* BudgetList.swift */; };
+		CCDCDF7126D159AA0021EDE6 /* BudgetDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF7026D159AA0021EDE6 /* BudgetDetailPage.swift */; };
+		CCDCDF7326D15B250021EDE6 /* BudgetAmountCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF7226D15B250021EDE6 /* BudgetAmountCardStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +103,12 @@
 		CCDCDF5B26D0AA920021EDE6 /* PeriodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodList.swift; sourceTree = "<group>"; };
 		CCDCDF5D26D0AE3D0021EDE6 /* PeriodPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodPage.swift; sourceTree = "<group>"; };
 		CCDCDF5F26D0B65C0021EDE6 /* BudgetAmountCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetAmountCard.swift; sourceTree = "<group>"; };
+		CCDCDF6126D14F110021EDE6 /* CurrentPeriodPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPeriodPage.swift; sourceTree = "<group>"; };
+		CCDCDF6326D14FD60021EDE6 /* CurrentPeriodData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrentPeriodData.json; sourceTree = "<group>"; };
+		CCDCDF6C26D154E50021EDE6 /* BudgetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetRow.swift; sourceTree = "<group>"; };
+		CCDCDF6E26D1555C0021EDE6 /* BudgetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetList.swift; sourceTree = "<group>"; };
+		CCDCDF7026D159AA0021EDE6 /* BudgetDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailPage.swift; sourceTree = "<group>"; };
+		CCDCDF7226D15B250021EDE6 /* BudgetAmountCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetAmountCardStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +210,7 @@
 				CC3BCCE726CF164C0069E200 /* PeriodsData.json */,
 				CC3BCCEA26CF165C0069E200 /* BudgetsData.json */,
 				CC3BCCED26CF166F0069E200 /* TransactionsData.json */,
+				CCDCDF6326D14FD60021EDE6 /* CurrentPeriodData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -234,6 +248,10 @@
 			isa = PBXGroup;
 			children = (
 				CCDCDF5F26D0B65C0021EDE6 /* BudgetAmountCard.swift */,
+				CCDCDF7226D15B250021EDE6 /* BudgetAmountCardStack.swift */,
+				CCDCDF7026D159AA0021EDE6 /* BudgetDetailPage.swift */,
+				CCDCDF6E26D1555C0021EDE6 /* BudgetList.swift */,
+				CCDCDF6C26D154E50021EDE6 /* BudgetRow.swift */,
 			);
 			path = Budgets;
 			sourceTree = "<group>";
@@ -243,6 +261,7 @@
 			children = (
 				CCDCDF5726D0A9170021EDE6 /* PeriodsPage.swift */,
 				CCDCDF5D26D0AE3D0021EDE6 /* PeriodPage.swift */,
+				CCDCDF6126D14F110021EDE6 /* CurrentPeriodPage.swift */,
 				CCDCDF5926D0A9BF0021EDE6 /* PeriodRow.swift */,
 				CCDCDF5B26D0AA920021EDE6 /* PeriodList.swift */,
 			);
@@ -331,6 +350,7 @@
 			files = (
 				CC3BCCEB26CF165C0069E200 /* BudgetsData.json in Resources */,
 				CC3BCCC026CF149D0069E200 /* Preview Assets.xcassets in Resources */,
+				CCDCDF6426D14FD60021EDE6 /* CurrentPeriodData.json in Resources */,
 				CC3BCCE826CF164C0069E200 /* PeriodsData.json in Resources */,
 				CC3BCCBD26CF149D0069E200 /* Assets.xcassets in Resources */,
 				CC3BCCEE26CF166F0069E200 /* TransactionsData.json in Resources */,
@@ -341,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDCDF6526D14FD60021EDE6 /* CurrentPeriodData.json in Resources */,
 				CC3BCCEF26CF166F0069E200 /* TransactionsData.json in Resources */,
 				CC3BCCE926CF164C0069E200 /* PeriodsData.json in Resources */,
 				CC3BCCEC26CF165C0069E200 /* BudgetsData.json in Resources */,
@@ -358,17 +379,22 @@
 				CC3BCCFD26CF1AEA0069E200 /* TransactionRow.swift in Sources */,
 				CC3BCCD926CF15330069E200 /* widget.intentdefinition in Sources */,
 				CCDCDF5E26D0AE3D0021EDE6 /* PeriodPage.swift in Sources */,
+				CCDCDF6226D14F110021EDE6 /* CurrentPeriodPage.swift in Sources */,
 				CC3BCCBB26CF149C0069E200 /* ContentView.swift in Sources */,
 				CC3BCCF726CF19040069E200 /* Transaction.swift in Sources */,
 				CC3BCD0726D02E260069E200 /* TransactionList.swift in Sources */,
 				CCDCDF5C26D0AA920021EDE6 /* PeriodList.swift in Sources */,
+				CCDCDF7126D159AA0021EDE6 /* BudgetDetailPage.swift in Sources */,
 				CC3BCD0526D013C60069E200 /* DateFormatter.swift in Sources */,
 				CC3BCCF426CF18610069E200 /* Budget.swift in Sources */,
+				CCDCDF7326D15B250021EDE6 /* BudgetAmountCardStack.swift in Sources */,
 				CC3BCCF126CF176A0069E200 /* Period.swift in Sources */,
 				CCDCDF6026D0B65C0021EDE6 /* BudgetAmountCard.swift in Sources */,
 				CCDCDF5A26D0A9BF0021EDE6 /* PeriodRow.swift in Sources */,
+				CCDCDF6D26D154E50021EDE6 /* BudgetRow.swift in Sources */,
 				CC3BCD0326D00B5A0069E200 /* ModelData.swift in Sources */,
 				CC3BCD0026D0066B0069E200 /* CurrencyFormatter.swift in Sources */,
+				CCDCDF6F26D1555C0021EDE6 /* BudgetList.swift in Sources */,
 				CC3BCCB926CF149C0069E200 /* FinappApp.swift in Sources */,
 				CCDCDF5826D0A9170021EDE6 /* PeriodsPage.swift in Sources */,
 			);

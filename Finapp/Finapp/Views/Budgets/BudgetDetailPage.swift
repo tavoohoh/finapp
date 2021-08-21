@@ -1,29 +1,29 @@
 //
-//  Budget.swift
+//  BudgetDetailPage.swift
 //  Finapp
 //
-//  Created by Gustavo Santamaría on 20/08/21.
+//  Created by Gustavo Santamaría on 21/08/21.
 //
 
 import SwiftUI
 
-struct PeriodPage: View {
+struct BudgetDetailPage: View {
     @State private var showActionSheet = false
     @State private var showEditSheet = false
+    @EnvironmentObject var modelData: ModelData
     
-    var period: Period = ModelData().periods[0]
-    var title: String = "Period"
+    var budget: Budget
     
     var body: some View {
         VStack {
             BudgetAmountCardStack(
-                income: period.total_income,
-                outcome: period.total_expenses
+                income: budget.amount,
+                outcome: budget.spent
             )
             
-            BudgetList(budgets: period.budget)
+            TransactionList(transactions: modelData.transactions)
         }
-        .navigationTitle(title)
+        .navigationTitle(budget.name)
         .toolbar {
             Button(action: { showActionSheet.toggle() }) {
                 Text("Actions")
@@ -46,10 +46,13 @@ struct PeriodPage: View {
     }
 }
 
-struct PeriodPage_Previews: PreviewProvider {
-    static var period = ModelData().periods[0]
+struct BudgetDetailPage_Previews: PreviewProvider {
+    static var budget: Budget = ModelData().currentPeriod.budget[0]
     
     static var previews: some View {
-        PeriodPage(period: period)
+        BudgetDetailPage(
+            budget: budget
+        )
+        .environmentObject(ModelData())
     }
 }

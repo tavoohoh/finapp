@@ -13,7 +13,7 @@ struct PeriodsPage: View {
     var body: some View {
         NavigationView {
             PeriodList(periods: modelData.periods)
-            .navigationTitle("Finapp")
+                .navigationTitle("All Periods")
         }
     }
 }

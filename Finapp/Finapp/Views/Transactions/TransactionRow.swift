@@ -9,6 +9,10 @@ import SwiftUI
 
 struct TransactionRow: View {
     var transaction: Transaction
+    var asd = true
+    
+    @State private var showingOptions = true
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -23,6 +27,8 @@ struct TransactionRow: View {
                 .font(.footnote)
                 .multilineTextAlignment(.trailing)
         }
+        
+        
     }
 }
 

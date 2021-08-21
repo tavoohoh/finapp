@@ -1,58 +1,58 @@
 [
-  {
-    "spent": 0,
-    "name": "Entertainment",
-    "enabled": true,
-    "amount": 0,
-    "id": "36vddw3fPg5wYrceh56u"
-  },
-  {
-    "spent": 0,
-    "name": "Food",
-    "amount": 0,
-    "enabled": true,
-    "id": "6VSm149CEjSjx2qnJ5kD"
-  },
-  {
-    "name": "Transportation",
-    "enabled": true,
-    "spent": 0,
-    "amount": 0,
-    "id": "Krsa2iyH2WsxfCZMOtGU"
-  },
-  {
-    "amount": 0,
-    "spent": 0,
-    "enabled": true,
-    "name": "Housing",
-    "id": "LYOId8DS4Y4FnHkfQyWO"
-  },
-  {
-    "name": "Personal",
-    "amount": 0,
-    "enabled": true,
-    "spent": 0,
-    "id": "i2gxWK0Wso7zQO0Fq6JU"
-  },
-  {
-    "spent": 0,
-    "amount": 0,
-    "enabled": true,
-    "name": "Other",
-    "id": "mn1zjSyZVfn1d0sj4CQE"
-  },
-  {
-    "amount": 0,
-    "spent": 0,
-    "name": "Health Care",
-    "enabled": true,
-    "id": "tqF55mrfgdGsH4zXhF7r"
-  },
-  {
-    "name": "Loans",
-    "enabled": true,
-    "spent": 0,
-    "amount": 0,
-    "id": "zAkEcph9a0CiwKOFP0Og"
-  }
+    {
+      "id": "36vddw3fPg5wYrceh56u",
+      "amount": 500000,
+      "name": "Entertainment",
+      "spent": 115000,
+      "enabled": true
+    },
+    {
+      "spent": 470000,
+      "name": "Food",
+      "enabled": true,
+      "id": "6VSm149CEjSjx2qnJ5kD",
+      "amount": 1200000
+    },
+    {
+      "name": "Transportation",
+      "amount": 130000,
+      "id": "Krsa2iyH2WsxfCZMOtGU",
+      "enabled": true,
+      "spent": 0
+    },
+    {
+      "enabled": true,
+      "spent": 2050000,
+      "amount": 2500000,
+      "id": "LYOId8DS4Y4FnHkfQyWO",
+      "name": "Housing"
+    },
+    {
+      "id": "i2gxWK0Wso7zQO0Fq6JU",
+      "amount": 1000000,
+      "name": "Personal",
+      "spent": 0,
+      "enabled": true
+    },
+    {
+      "enabled": true,
+      "spent": 0,
+      "id": "mn1zjSyZVfn1d0sj4CQE",
+      "name": "Other",
+      "amount": 200000
+    },
+    {
+      "enabled": true,
+      "spent": 0,
+      "amount": 500000,
+      "name": "Health Care",
+      "id": "tqF55mrfgdGsH4zXhF7r"
+    },
+    {
+      "amount": 600000,
+      "name": "Loans",
+      "enabled": true,
+      "spent": 0,
+      "id": "zAkEcph9a0CiwKOFP0Og"
+    }
 ]
