@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct FinappApp: App {
     @StateObject private var modelData = ModelData()
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()

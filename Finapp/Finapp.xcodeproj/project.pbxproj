@@ -35,7 +35,11 @@
 		CC3BCD0326D00B5A0069E200 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0226D00B5A0069E200 /* ModelData.swift */; };
 		CC3BCD0526D013C60069E200 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0426D013C60069E200 /* DateFormatter.swift */; };
 		CC3BCD0726D02E260069E200 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0626D02E260069E200 /* TransactionList.swift */; };
-		CC3BCD0926D02EFA0069E200 /* BudgetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BCD0826D02EFA0069E200 /* BudgetDetail.swift */; };
+		CCDCDF5826D0A9170021EDE6 /* PeriodsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5726D0A9170021EDE6 /* PeriodsPage.swift */; };
+		CCDCDF5A26D0A9BF0021EDE6 /* PeriodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5926D0A9BF0021EDE6 /* PeriodRow.swift */; };
+		CCDCDF5C26D0AA920021EDE6 /* PeriodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5B26D0AA920021EDE6 /* PeriodList.swift */; };
+		CCDCDF5E26D0AE3D0021EDE6 /* PeriodPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5D26D0AE3D0021EDE6 /* PeriodPage.swift */; };
+		CCDCDF6026D0B65C0021EDE6 /* BudgetAmountCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDF5F26D0B65C0021EDE6 /* BudgetAmountCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +91,11 @@
 		CC3BCD0226D00B5A0069E200 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		CC3BCD0426D013C60069E200 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		CC3BCD0626D02E260069E200 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
-		CC3BCD0826D02EFA0069E200 /* BudgetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetail.swift; sourceTree = "<group>"; };
+		CCDCDF5726D0A9170021EDE6 /* PeriodsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodsPage.swift; sourceTree = "<group>"; };
+		CCDCDF5926D0A9BF0021EDE6 /* PeriodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodRow.swift; sourceTree = "<group>"; };
+		CCDCDF5B26D0AA920021EDE6 /* PeriodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodList.swift; sourceTree = "<group>"; };
+		CCDCDF5D26D0AE3D0021EDE6 /* PeriodPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodPage.swift; sourceTree = "<group>"; };
+		CCDCDF5F26D0B65C0021EDE6 /* BudgetAmountCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetAmountCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3BCCBA26CF149C0069E200 /* ContentView.swift */,
+				CCDCDF5626D0A9050021EDE6 /* Periods */,
 				CC3BCD0A26D030F10069E200 /* Budgets */,
 				CC3BCCFE26CF1AF10069E200 /* Transactions */,
 			);
@@ -224,9 +233,20 @@
 		CC3BCD0A26D030F10069E200 /* Budgets */ = {
 			isa = PBXGroup;
 			children = (
-				CC3BCD0826D02EFA0069E200 /* BudgetDetail.swift */,
+				CCDCDF5F26D0B65C0021EDE6 /* BudgetAmountCard.swift */,
 			);
 			path = Budgets;
+			sourceTree = "<group>";
+		};
+		CCDCDF5626D0A9050021EDE6 /* Periods */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCDF5726D0A9170021EDE6 /* PeriodsPage.swift */,
+				CCDCDF5D26D0AE3D0021EDE6 /* PeriodPage.swift */,
+				CCDCDF5926D0A9BF0021EDE6 /* PeriodRow.swift */,
+				CCDCDF5B26D0AA920021EDE6 /* PeriodList.swift */,
+			);
+			path = Periods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,16 +357,20 @@
 			files = (
 				CC3BCCFD26CF1AEA0069E200 /* TransactionRow.swift in Sources */,
 				CC3BCCD926CF15330069E200 /* widget.intentdefinition in Sources */,
+				CCDCDF5E26D0AE3D0021EDE6 /* PeriodPage.swift in Sources */,
 				CC3BCCBB26CF149C0069E200 /* ContentView.swift in Sources */,
 				CC3BCCF726CF19040069E200 /* Transaction.swift in Sources */,
 				CC3BCD0726D02E260069E200 /* TransactionList.swift in Sources */,
-				CC3BCD0926D02EFA0069E200 /* BudgetDetail.swift in Sources */,
+				CCDCDF5C26D0AA920021EDE6 /* PeriodList.swift in Sources */,
 				CC3BCD0526D013C60069E200 /* DateFormatter.swift in Sources */,
 				CC3BCCF426CF18610069E200 /* Budget.swift in Sources */,
 				CC3BCCF126CF176A0069E200 /* Period.swift in Sources */,
+				CCDCDF6026D0B65C0021EDE6 /* BudgetAmountCard.swift in Sources */,
+				CCDCDF5A26D0A9BF0021EDE6 /* PeriodRow.swift in Sources */,
 				CC3BCD0326D00B5A0069E200 /* ModelData.swift in Sources */,
 				CC3BCD0026D0066B0069E200 /* CurrencyFormatter.swift in Sources */,
 				CC3BCCB926CF149C0069E200 /* FinappApp.swift in Sources */,
+				CCDCDF5826D0A9170021EDE6 /* PeriodsPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

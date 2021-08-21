@@ -12,8 +12,11 @@ struct TransactionList: View {
     
     var body: some View {
         List {
-            ForEach(transactions) { transaction in
-                TransactionRow(transaction: transaction)
+            Section(
+                header: Text("Movements")) {
+                ForEach(transactions) { transaction in
+                    TransactionRow(transaction: transaction)
+                }
             }
         }
     }
