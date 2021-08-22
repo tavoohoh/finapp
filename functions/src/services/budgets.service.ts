@@ -1,7 +1,13 @@
 import { firestore } from 'firebase-admin';
 import { HttpsError } from 'firebase-functions/lib/providers/https';
 import { CollectionEnum } from '../enums/collection.enum';
-import { BudgetModel, BudgetQueryModel } from '../models/budget.model';
+import {
+  BudgetDetailApiModel,
+  BudgetModel,
+  BudgetQueryModel
+} from '../models/budget.model';
+import { TransactionsService } from './transactions.service';
+import { PeriodsService } from './periods.service';
 
 const list = async (queryParams?: BudgetQueryModel): Promise<BudgetModel[]> => {
   const query: any = firestore().collection(CollectionEnum.budgets);
@@ -56,10 +62,41 @@ const remove = async (id: string): Promise<firestore.WriteResult> => {
   return firestore().collection(CollectionEnum.budgets).doc(id).delete();
 };
 
+const apiGetByPeriodAndName = async (
+  period_id: string,
+  budget_name: string
+): Promise<BudgetDetailApiModel> => {
+  const period = await PeriodsService.get(period_id);
+  const budgets = period.budget.filter((o) => o.name === budget_name);
+  const budget = budgets[0];
+  const transactions = (
+    await TransactionsService.list({
+      budget_name,
+      period_id
+    })
+  ).map((o) => {
+    return {
+      id: o.id,
+      name: o.name,
+      amount: o.amount,
+      date: o.date
+    };
+  });
+
+  return {
+    id: budget.id,
+    name: budget.name,
+    amount: budget.amount,
+    spent: budget.spent,
+    transactions
+  };
+};
+
 export const BudgetsService = {
   get,
   list,
   create,
   patch,
-  remove
+  remove,
+  apiGetByPeriodAndName
 };

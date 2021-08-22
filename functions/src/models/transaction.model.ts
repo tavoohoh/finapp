@@ -10,6 +10,6 @@ export interface TransactionModel {
 
 export interface TransactionQueryModel {
   period_id?: string;
-  budget?: string;
+  budget_name?: string;
   date?: string;
 }

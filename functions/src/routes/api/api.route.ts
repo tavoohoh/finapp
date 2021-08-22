@@ -5,6 +5,7 @@ import { PeriodsService } from '../../services/periods.service';
 import { ApiUrlsEnum } from '../../enums/api.enum';
 import { periodsApi } from './periods.route';
 import { periodDetailApi } from './period-detail.route';
+import { budgetDetailApi } from './budget-detail.route';
 
 export const api = https.onRequest(async (request, response) => {
   return cors(request, response, async () => {
@@ -32,9 +33,11 @@ export const api = https.onRequest(async (request, response) => {
           /**
            * Get budget detail
            */
-          return response.status(200).send({
-            request: 'budget detail'
-          });
+          return budgetDetailApi(
+            request.method as methodEnum,
+            params,
+            response
+          );
 
         default:
           return response.status(405).send({
