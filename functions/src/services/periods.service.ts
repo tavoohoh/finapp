@@ -3,6 +3,7 @@ import { HttpsError } from 'firebase-functions/lib/providers/https';
 import { CollectionEnum } from '../enums/collection.enum';
 import {
   PeriodApiModel,
+  PeriodDetailApiModel,
   PeriodModel,
   PeriodQueryModel
 } from '../models/period.model';
@@ -144,11 +145,51 @@ const apiList = async (): Promise<PeriodApiModel[]> => {
   });
 };
 
+const apiMapPeriod = (data: PeriodModel, id: string): PeriodDetailApiModel => {
+  const budget = data.budget.map((o) => {
+    return {
+      name: o.name,
+      amount: o.amount
+    };
+  });
+
+  return {
+    id,
+    total_income: data.total_income,
+    total_expenses: data.total_expenses,
+    difference: data.total_income - data.total_expenses,
+    budget
+  };
+};
+
+const apiGetActive = async (): Promise<PeriodDetailApiModel> => {
+  const querySnapShot = await firestore()
+    .collection(CollectionEnum.periods)
+    .where('is_active', '==', true)
+    .get();
+
+  if (querySnapShot.docs.length === 0) {
+    throw new HttpsError('failed-precondition', 'No active period found');
+  }
+
+  const data: PeriodModel = querySnapShot.docs[0].data() as PeriodModel;
+
+  return apiMapPeriod(data, querySnapShot.docs[0].id);
+};
+
+const apiGetById = async (id: string): Promise<PeriodDetailApiModel> => {
+  const data = await get(id);
+
+  return apiMapPeriod(data, data.id as string);
+};
+
 export const PeriodsService = {
   get,
   list,
   create,
   patch,
   remove: terminate,
-  apiList
+  apiList,
+  apiGetActive,
+  apiGetById
 };

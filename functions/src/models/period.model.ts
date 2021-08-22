@@ -19,6 +19,17 @@ export interface PeriodApiModel {
   budget_amount: number;
 }
 
+export interface PeriodDetailApiModel {
+  id: string;
+  total_income: number;
+  total_expenses: number;
+  difference: number;
+  budget: {
+    name: string;
+    amount: number;
+  }[];
+}
+
 export interface PeriodQueryModel {
   date_start?: string;
   date_end?: string;
