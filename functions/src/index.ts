@@ -15,3 +15,4 @@ firebase.initializeApp(firebaseConfig);
 export { periods } from './routes/periods.route';
 export { transactions } from './routes/transactions.route';
 export { budgets } from './routes/budgets.route';
+export { api } from './routes/api/api.route';

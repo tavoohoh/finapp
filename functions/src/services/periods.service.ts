@@ -1,13 +1,15 @@
 import { firestore } from 'firebase-admin';
 import { HttpsError } from 'firebase-functions/lib/providers/https';
 import { CollectionEnum } from '../enums/collection.enum';
-import { PeriodModel, PeriodQueryModel } from '../models/period.model';
+import {
+  PeriodApiModel,
+  PeriodModel,
+  PeriodQueryModel
+} from '../models/period.model';
 import { DateFactory } from '../commons/date';
 import { BudgetsService } from './budgets.service';
 
-const list = async (
-  queryParams: PeriodQueryModel
-): Promise<PeriodModel[]> => {
+const list = async (queryParams: PeriodQueryModel): Promise<PeriodModel[]> => {
   let query: any = firestore().collection(CollectionEnum.periods);
 
   if (queryParams.date_start) {
@@ -28,15 +30,17 @@ const list = async (
 
   const querySnapShot = await query.get();
 
-  return querySnapShot.docs.map((o: { data: () => PeriodModel; id: string; }) => {
-    const data = o.data() as PeriodModel;
-    const id = o.id;
+  return querySnapShot.docs.map(
+    (o: { data: () => PeriodModel; id: string }) => {
+      const data = o.data() as PeriodModel;
+      const id = o.id;
 
-    return {
-      ...data,
-      id
-    };
-  });
+      return {
+        ...data,
+        id
+      };
+    }
+  );
 };
 
 const get = async (id: string): Promise<PeriodModel> => {
@@ -57,7 +61,9 @@ const get = async (id: string): Promise<PeriodModel> => {
   };
 };
 
-const create = async (): Promise<firestore.DocumentReference<firestore.DocumentData>> => {
+const create = async (): Promise<
+  firestore.DocumentReference<firestore.DocumentData>
+> => {
   const currentPeriod = await list({
     is_active: true
   });
@@ -70,7 +76,8 @@ const create = async (): Promise<firestore.DocumentReference<firestore.DocumentD
     is_latest: true
   });
 
-  const total_savings = (latestPeriod[0]?.total_savings || 0) + (latestPeriod[0]?.difference || 0);
+  const total_savings =
+    (latestPeriod[0]?.total_savings || 0) + (latestPeriod[0]?.difference || 0);
 
   const body: PeriodModel = {
     date_start: DateFactory.formatAsYYYYMMDD(new Date()),
@@ -90,7 +97,10 @@ const create = async (): Promise<firestore.DocumentReference<firestore.DocumentD
   return firestore().collection(CollectionEnum.periods).add(body);
 };
 
-const patch = async (id: string, body: PeriodModel): Promise<firestore.WriteResult> => {
+const patch = async (
+  id: string,
+  body: PeriodModel
+): Promise<firestore.WriteResult> => {
   return await firestore()
     .collection(CollectionEnum.periods)
     .doc(id)
@@ -111,10 +121,34 @@ const terminate = async (id: string): Promise<firestore.WriteResult> => {
   } as any);
 };
 
+const apiList = async (): Promise<PeriodApiModel[]> => {
+  const querySnapShot = await firestore()
+    .collection(CollectionEnum.periods)
+    .orderBy('date_start', 'desc')
+    .get();
+
+  return querySnapShot.docs.map((o: { data: any; id: string }) => {
+    const data = o.data() as PeriodModel;
+    const id = o.id;
+    let budget_amount = 0;
+
+    data.budget.forEach((o) => {
+      budget_amount = budget_amount + o.amount;
+    });
+
+    return {
+      id,
+      date_start: data.date_start,
+      budget_amount
+    };
+  });
+};
+
 export const PeriodsService = {
   get,
   list,
   create,
   patch,
-  remove: terminate
+  remove: terminate,
+  apiList
 };

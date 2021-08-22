@@ -13,6 +13,12 @@ export interface PeriodModel {
   id?: string;
 }
 
+export interface PeriodApiModel {
+  id: string;
+  date_start: string;
+  budget_amount: number;
+}
+
 export interface PeriodQueryModel {
   date_start?: string;
   date_end?: string;
